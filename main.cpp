@@ -82,8 +82,11 @@ static void usage(const char* arg0) {
 	char* p = basename(s);
 	fprintf(stderr, "Usage: %s [OPTIONS] [FILE [FILE...]]\n\n", p);
 	free(s);
-	
+
 	fprintf(stderr, "Options:\n");
+        fprintf(stderr, "  CTRL-o		 Open a file\n");
+        fprintf(stderr, "  CTRL-s                Save the editor to the assocated filename\n");
+        fprintf(stderr, "  CTRL-q                Quit the editor\n");
 	fprintf(stderr, "  -h, --help            Show this usage information and exit\n");
 }
 

@@ -251,7 +251,7 @@ ReturnExt EditorDocument::SaveToFile(const char* file, bool switchFile)
 	// Open the temporary file
 	
 	char tmp[L_tmpnam];
-	if (tmpnam(tmp) == NULL) {
+	if (mkstemp(tmp) == NULL) {
 		return ReturnExt(false, "Cannot generate a name for a new "
 				"temporary file", errno);
 	}
